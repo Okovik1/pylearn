@@ -42,24 +42,24 @@
 # import time
 #
 #
-# def timer(func):
-#     def wrapper():
-#         start_time = time.time()
-#         func()
-#         end_time = time.time()
-#         print(f'{func.__name__} took {end_time - start_time}')
-#
-#     return wrapper
-#
-#
-# @timer
-# def count():
-#     lst = []
-#     for x in range(1, 1000001):
-#         lst.append(x)
-#
-#
-# count()
+def timer(func):
+    def wrapper():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print(f'{func.__name__} took {end_time - start_time}')
+
+    return wrapper
+
+
+@timer
+def count():
+    lst = []
+    for x in range(1, 1000001):
+        lst.append(x)
+
+
+count()
 
 # Create a function which creates list which is using list comprehension ->
 # create another function that create list of even numbers out of the created list (for loop)

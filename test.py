@@ -73,6 +73,7 @@ def my_function(*args, **kwargs):
     """
     print(args)
     print(kwargs)
+
 print(my_function.__doc__)
 
 my_function(1,2,3,4,5,6,["a","b","c"], name="Kate", age = 13)
